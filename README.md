@@ -1,1 +1,1 @@
-[Click this link](https://www.nicecat99.github.io/)
+[Click this link](https://nicecat99.github.io/)
