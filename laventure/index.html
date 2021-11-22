@@ -3,18 +3,18 @@
     
     Last updated: 11/22/2021
     Release Date: 10/09/2021
-    Started Working on: 10/09/2021    
-    The Pre-Alpha update is the gameplay update
-    Lines of code: 783
+    Started Working on: 10/09/2021   
+    Lines of code: 793
     
-    Update 1.4pa (11/22/2021):
-        Changed the Ball Game | How To Play will be changed in the final update
+    Update 1.5pa (11/22/2021):
+        Car Update
+        Bug fixes
         
     Update 11/07/2021:
-        Laventure 1.0pa - 1.6pa?
+        Laventure 1.0pa - 1.5.1pa
         
-    Update 10/11/2021:
-        Laventure 1.0d to 2.7d
+    Update 10/10/2021:
+        Laventure 1.0d to 1.9.8d
         
     Update 10/10/2021:
         Lavneture Indev
@@ -268,10 +268,13 @@ options.title = 'Laventure';
         function Car() {
             clearInterval(draw4);
             options.body.title = 'Car Game';
+          var randomY = Math.floor(Math.random() * 200);
           var randomX = Math.floor(Math.random() * 300);
           var PlayerX = 600;
           var PlayerY = 600;
-          options.body.innerHTML = '<h1 id = "coord"></h1><div id = "player"></div><button id = "cleft">Left</button><button id = "cright">Right</button><button id = "cup">Up</button><button id = "cdown">Down</button>';
+          
+          options.body.innerHTML = '<div id = "curpos"></div><h1 id = "coord"></h1><div id = "player"></div><button id = "cleft">Left</button><button id = "cright">Right</button><button id = "cup">Up</button><button id = "cdown">Down</button>';
+          
           options.getElementById('player').style.background = 'yellow';
           options.getElementById('player').style.width = '100px';
           options.getElementById('player').style.height = '100px';
@@ -299,7 +302,7 @@ options.title = 'Laventure';
               kd = true;
             }
 
-            if (k.key === 'd' | k.key ===' ArrowRight') {
+            if (k.key === 'd' | k.key === 'ArrowRight') {
               kr = true;
             }
 
@@ -313,11 +316,12 @@ options.title = 'Laventure';
             kd = false;
           });
 
+          var win = options.getElementById('curpos');
           var CarBtn = {
-              'Left':options.getElementById('cleft'),
-              'Right':options.getElementById('cright'),
-              'Up':options.getElementById('cup'),
-              'Down':options.getElementById('cdown'),
+              'Left': options.getElementById('cleft'),
+              'Right': options.getElementById('cright'),
+              'Up': options.getElementById('cup'),
+              'Down': options.getElementById('cdown'),
           };
           
           CarBtn['Left'].addEventListener('mousedown',function(){
@@ -339,6 +343,12 @@ options.title = 'Laventure';
               kd = true;
               CarBtn['Down'].style.background = 'rgb(47, 38, 204)';
           });
+          
+          win.style.background = 'green';
+          win.style.position = 'fixed';
+          win.style.border = '5pt solid white';
+          win.style.width = '10px';
+          win.style.height = '10px';
           
           CarBtn['Up'].style.cursor = 'pointer';
           CarBtn['Up'].style.borderRadius = '200px';
@@ -402,13 +412,11 @@ options.title = 'Laventure';
               }
           });
           
+          
           var draw2 = setInterval(function() {
             options.getElementById('coord').textContent = PlayerX + ', ' + PlayerY;
             options.getElementById('player').style.left = PlayerX + 'px';
             options.getElementById('player').style.top = PlayerY + 'px';
-          });
-
-          setInterval(function() {
             if (challenge) {
               time -= 1;
             }
@@ -451,14 +459,16 @@ options.title = 'Laventure';
               PlayerY += 1;
             }
 
-            if (PlayerX === randomX && PlayerY < 200) {
+            win.style.left = (randomX + 30) + 'px';
+            win.style.top = (randomY + 30) + 'px';
+            
+            if (PlayerX > randomX && PlayerX < (randomX + 50) && PlayerY > randomY && PlayerY < (randomY + 50)) {
               if (challenge) {
                 clearInterval(draw2);
                 time = 0;
                 Start();
               }
-              
-              randomX = Math.floor(Math.random() * 300);
+
               clearInterval(draw2);
               limit += 1;
               Start();
@@ -769,7 +779,7 @@ options.title = 'Laventure';
             });
         }
         
-        document.body.innerHTML = '<span style = "color:white;">v1.3.0pa</span><h1 style = "position:fixed;color:white;font-size:75px;left:140px;top:70px;">Laventure</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
+        document.body.innerHTML = '<span style = "color:white;">v1.5pa</span><h1 style = "position:fixed;color:white;font-size:75px;left:140px;top:70px;">Laventure</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
     
         document.getElementById('start').addEventListener('click', Start);
         
