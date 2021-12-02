@@ -1,0 +1,14 @@
+            a {
+                position:relative;
+                left:100px;
+                color:white;
+                font-family:sans-serif;
+            }
+            
+            html {
+                position:relative;
+                left:100px;
+                background:black;
+                color:white;
+                font-family:sans-serif;
+            }
