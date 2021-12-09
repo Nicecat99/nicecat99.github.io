@@ -1,3 +1,4 @@
+
 try {
 var options;
 var that;
@@ -61,7 +62,6 @@ options.title = 'Bavalt';
       var limit = 1;
       var time = 30000;
       function Play() {
-        //menu
         options.body.style.cursor = 'default';
         function Start() {
         options.body.title = 'Menu';
@@ -116,7 +116,6 @@ options.title = 'Bavalt';
           options.getElementById('challenge').style.position = 'fixed';
           options.getElementById('challenge').style.top = '280px';
           options.getElementById('challenge').style.left = '340px';
-          //
           
           options.getElementById('challenge').addEventListener('click', function() {
               
@@ -154,8 +153,7 @@ options.title = 'Bavalt';
             }
 
           });
-          
-          //
+         
           options.getElementById('money').style.position = 'fixed';
           options.getElementById('money').style.top = '-5px';
           options.getElementById('money').style.left = '10px';
@@ -175,7 +173,7 @@ options.title = 'Bavalt';
           options.getElementById('htp').style.top = '280px';
           options.getElementById('htp').addEventListener('click', function() {
               
-            alert('How To Play:\n\nClick Challenge 1 button to start playing the Ball game. Then, go to the green bar to get score. You can\'t see the score, but if you get 1000+, you get a dollar. Get $2s to unlock the Car, go somewhere around the green sqaure. If you did it, then the level increases. Be on level two to start the another challenge. It\'s much like a car game, but there is a timer for 30secs. If you win, your level increases. If you are on level 5, you can unlock ball bar mode which is chalenge 3. You should always start with 3pts. Hit the bar to get more points or else you lose the point. You can lose the game if you get 0 or less points. You win if you get 50 or more points. If you win the Ball Bar, you get a dollar. The level is also your score good luck!');
+            alert('How To Play:\n\nClick Challenge 1 button to start playing the Ball game. Then, go to the green bar to get score. If you get 1000+ score, you get a dollar. Get $2s to unlock the Car, go somewhere around the green sqaure. If you did it, then the level increases. Be on level two to start the another challenge. It\'s much like a car game, but there is a timer for 30secs. If you win, your level increases. If you are on level 5, you can unlock ball bar mode which is chalenge 3. You should always start with 3pts. Hit the bar to get more points or else you lose the point. You can lose the game if you get 0 or less points. You win if you get 50 or more points. If you win the Ball Bar, you get a dollar. The level is also your score good luck!');
             
           });
           
@@ -453,8 +451,8 @@ options.title = 'Bavalt';
         }
 
         function Ball() {
-            clearInterval(draw4);
-          options.body.innerHTML = '<div id = "ball"></div><button id = "left">Left</button><button id = "right">Right</button><div id = "ob"></div>';
+          clearInterval(draw4);
+          options.body.innerHTML = '<div id = "ball"></div><button id = "left">Left</button><button id = "right">Right</button><div id = "ob"></div><h1 id = "ballpt"></h1>';
           options.body.title = 'Ball Obstacle';
           var ob = options.getElementById('ob');
           ob.style.background = 'green';
@@ -515,16 +513,6 @@ options.title = 'Bavalt';
           RightBtn.style.position = 'fixed';
           RightBtn.style.left = '450px';
           RightBtn.style.top = '260px';
-          
-          addEventListener('mousemove', function(e) {
-            if (e.clientX <= 100 && e.clientY <= 100) {
-              ballX = 0;
-            }
-
-            if (e.clientX >= 400 && e.clientY <= 100) {
-              ballX = 400;
-            }
-          })
 
           addEventListener('mouseup', function() {
             ballLeft = false;
@@ -536,7 +524,6 @@ options.title = 'Bavalt';
           });
           
           addEventListener('keydown', function(k) {
-
             if (k.keyCode === 37 | k.keyCode === 65) {
               ballLeft = true;
             }
@@ -544,6 +531,7 @@ options.title = 'Bavalt';
             if (k.keyCode === 39 | k.keyCode === 68) {
               ballRight = true;
             }
+            
           });
           
           addEventListener('keyup', function(k) {
@@ -553,7 +541,7 @@ options.title = 'Bavalt';
           
           var Score = 0;
           var draw = setInterval(function() {
-            
+            options.getElementById('ballpt').textContent = Score;
             getBall.style.left = ballX + 'px';
             if (ballLeft && ballX > 0) {
               ballX = ballX - 2;
@@ -591,6 +579,7 @@ options.title = 'Bavalt';
             options.body.innerHTML = '<button id = "bbl">Left</button><button id = "bbr">Right</button><div id = "bar"></div><div id = "ball-player"></div><h1 style = "color:white" id = "pt">'+Pt+'</h1>';
             
             options.body.title = 'Ball Bar';
+            
             var BarBreak = 0;
             var bpX = 260;
             var bpY = 140;
@@ -753,7 +742,7 @@ options.title = 'Bavalt';
             });
         }
         
-        document.body.innerHTML = '<span style = "color:white;">v0.1.1 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
+        document.body.innerHTML = '<span style = "color:white;">v0.1.2 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
     
         document.getElementById('start').addEventListener('click', Start);
         
