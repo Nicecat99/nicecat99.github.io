@@ -1,5 +1,5 @@
 # Nicecat99
-### [XML version](https://nicecat99.github.io/Main.xml)
+### [XML version](https://nicecat99.github.io/main.xml)
 
 - ### Link: https://nicecat99.github.io/
 - ### By: Nicecat99
