@@ -2,7 +2,7 @@
 <?xml-stylesheet href="xml.css" type="text/css"?>
 <!DOCTYPE info>
 <info>
-  <Link>Link: https://nicecat99.github.io/ &#xA;</Link>
-  <Start>Start: 11/19/2021 &#xA;</Start>
-  <Madein>Main in: Github &#xA;</Madein>
+  <![CDATA[Link: https://nicecat99.github.io/<br/>]]>
+  <![CDATA[Start: 11/19/2021<br/>]]>
+  <![CDATA[Made in: Github<br/>]]>
 </info>
