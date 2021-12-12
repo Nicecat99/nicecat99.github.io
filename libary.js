@@ -1,4 +1,3 @@
-//Incomplete version
     function strCommand(notAfunction) {
             document.body.contentEditable = true;
             document.body.style = 'background:black;color:white;font-family:monospace;';
