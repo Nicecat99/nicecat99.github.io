@@ -1,7 +1,14 @@
-    function strCommand(notAfunction) {
+//string Command v1.1
+    function cmd(notAfunction, object) {
+
             document.body.contentEditable = true;
             document.body.style = 'background:black;color:white;font-family:monospace;';
         try {
+            if(typoef notAfunction!=='function'){
+                 return notAfunction[object];
+               }
+        
+        else {
             notAfunction(function(name){
                 if(name.match('print') != null){
                     return function(n){
@@ -16,10 +23,11 @@
                 }
             });
         }
+        }
         
         catch(error){
             document.body.contentEditable = true;
             document.body.style = 'background:black;color:white;font-family:monospace;';
-            document.body.innerHTML=error;
+            document.body.innerHTML = error;
         }
     }
