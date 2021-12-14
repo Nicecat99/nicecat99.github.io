@@ -1,6 +1,5 @@
 
 try {
-var options;
 var that;
 that = document.createElement('head');
 document.querySelector('html').appendChild(that);
@@ -9,24 +8,16 @@ that.charset = 'utf-8';
 document.querySelector('head').appendChild(that);
 that = document.createElement('body');
 document.querySelector('html').appendChild(that);
-that = document;
-function define(option){
-    options = option;
-}
-
-define(that);
-that = undefined;
-define = undefined;
-options.title = 'Bavalt';
+document.title = 'Bavalt';
       
-    options.body.style.background = 'black';
-    options.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
+    document.body.style.background = 'black';
+    document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
         var logoX = -100;
         var speed = 0.1;
-        var logo = options.getElementById('logo');
-        options.body.style.cursor = 'wait';
-        var cursor = options.getElementById('invis');
+        var logo = document.getElementById('logo');
+        document.body.style.cursor = 'wait';
+        var cursor = document.getElementById('invis');
         cursor.title = 'Loading Screen';
         cursor.style.position = 'fixed';
         cursor.style.left = '-20px';
@@ -55,43 +46,43 @@ options.title = 'Bavalt';
         Play();
     }, 10000);
       
-      options.body.style.fontFamily = 'sans-serif';
+      document.body.style.fontFamily = 'sans-serif';
       var draw4;
       var $ = 0;
       var challenge = false;
       var limit = 1;
       var time = 30000;
       function Play() {
-        options.body.style.cursor = 'default';
+        document.body.style.cursor = 'default';
         function Start() {
-        options.body.title = 'Menu';
+        document.body.title = 'Menu';
         if(challenge){
           time = 30000;
           challenge = false;
         }
           
-          options.body.style.color = 'white';
-          options.body.style.background = 'black';
-          options.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "car">Buy Car</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
+          document.body.style.color = 'white';
+          document.body.style.background = 'black';
+          document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "car">Buy Car</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
 
-          options.getElementById('bb').style.position = 'fixed';
-          options.getElementById('bb').style.top = '280px';
-          options.getElementById('bb').style.left = '450px';
-          options.getElementById('bb').style.width = '100px';
-          options.getElementById('bb').style.height = '100px';
-          options.getElementById('bb').style.borderRadius = '100px';
-          options.getElementById('bb').style.border = '3.5pt solid white';
-          options.getElementById('bb').style.background = 'yellow';
-          options.getElementById('bb').style.color = 'white';
-          options.getElementById('bb').style.fontSize = '18px';
-          options.getElementById('bb').style.cursor = 'pointer';
+          document.getElementById('bb').style.position = 'fixed';
+          document.getElementById('bb').style.top = '280px';
+          document.getElementById('bb').style.left = '450px';
+          document.getElementById('bb').style.width = '100px';
+          document.getElementById('bb').style.height = '100px';
+          document.getElementById('bb').style.borderRadius = '100px';
+          document.getElementById('bb').style.border = '3.5pt solid white';
+          document.getElementById('bb').style.background = 'yellow';
+          document.getElementById('bb').style.color = 'white';
+          document.getElementById('bb').style.fontSize = '18px';
+          document.getElementById('bb').style.cursor = 'pointer';
           
-          options.getElementById('menu').style.position = 'fixed';
-          options.getElementById('menu').style.left = '220px';
-          options.getElementById('menu').style.top = '100px';
-          options.getElementById('menu').style.fontSize = '50px';
+          document.getElementById('menu').style.position = 'fixed';
+          document.getElementById('menu').style.left = '220px';
+          document.getElementById('menu').style.top = '100px';
+          document.getElementById('menu').style.fontSize = '50px';
 
-        options.getElementById('bb').addEventListener('click',function(){
+        document.getElementById('bb').addEventListener('click',function(){
         if($ > limit){
             alert('Money Limit');
         } else if(limit <= 4){
@@ -103,21 +94,21 @@ options.title = 'Bavalt';
         }
         });
 
-          options.getElementById('challenge').style.background = 'yellow';
-          options.getElementById('challenge').style.color = 'white';
-          options.getElementById('challenge').style.border = '3.5pt solid white';
-          options.getElementById('challenge').style.width = '100px';
-          options.getElementById('challenge').style.height = '100px';
-          options.getElementById('challenge').style.borderRadius = '100px';
-          options.getElementById('challenge').style.fontSize = '17px';
-          options.getElementById('challenge').style.cursor = 'pointer';
-          options.getElementById('car').style.background = 'yellow';
-          options.getElementById('car').style.border = '3.5pt solid white';
-          options.getElementById('challenge').style.position = 'fixed';
-          options.getElementById('challenge').style.top = '280px';
-          options.getElementById('challenge').style.left = '340px';
+          document.getElementById('challenge').style.background = 'yellow';
+          document.getElementById('challenge').style.color = 'white';
+          document.getElementById('challenge').style.border = '3.5pt solid white';
+          document.getElementById('challenge').style.width = '100px';
+          document.getElementById('challenge').style.height = '100px';
+          document.getElementById('challenge').style.borderRadius = '100px';
+          document.getElementById('challenge').style.fontSize = '17px';
+          document.getElementById('challenge').style.cursor = 'pointer';
+          document.getElementById('car').style.background = 'yellow';
+          document.getElementById('car').style.border = '3.5pt solid white';
+          document.getElementById('challenge').style.position = 'fixed';
+          document.getElementById('challenge').style.top = '280px';
+          document.getElementById('challenge').style.left = '340px';
           
-          options.getElementById('challenge').addEventListener('click', function() {
+          document.getElementById('challenge').addEventListener('click', function() {
               
             if(limit === 1){
                 alert('Be on level 2+');
@@ -134,16 +125,16 @@ options.title = 'Bavalt';
             
           });
             
-          options.getElementById('car').style.width = '100px';
-          options.getElementById('car').style.height = '100px';
-          options.getElementById('car').style.position = 'fixed';
-          options.getElementById('car').style.left = '120px';
-          options.getElementById('car').style.top = '280px';
-          options.getElementById('car').style.color = 'white';
-          options.getElementById('car').style.borderRadius = '100px';
-          options.getElementById('car').style.fontSize = '20px';
-          options.getElementById('car').style.cursor = 'pointer';
-          options.getElementById('car').addEventListener('click', function() {
+          document.getElementById('car').style.width = '100px';
+          document.getElementById('car').style.height = '100px';
+          document.getElementById('car').style.position = 'fixed';
+          document.getElementById('car').style.left = '120px';
+          document.getElementById('car').style.top = '280px';
+          document.getElementById('car').style.color = 'white';
+          document.getElementById('car').style.borderRadius = '100px';
+          document.getElementById('car').style.fontSize = '20px';
+          document.getElementById('car').style.cursor = 'pointer';
+          document.getElementById('car').addEventListener('click', function() {
               
             if ($ >= 2) {
               $ -= 2;
@@ -154,41 +145,41 @@ options.title = 'Bavalt';
 
           });
          
-          options.getElementById('money').style.position = 'fixed';
-          options.getElementById('money').style.top = '-5px';
-          options.getElementById('money').style.left = '10px';
-          options.getElementById('level').style.position = 'fixed';
-          options.getElementById('level').style.top = '-5px';
-          options.getElementById('level').style.right = '10px';
-          options.getElementById('htp').style.position = 'fixed';
-          options.getElementById('htp').style.background = 'yellow';
-          options.getElementById('htp').style.color = 'white';
-          options.getElementById('htp').style.fontSize = '20px';
-          options.getElementById('htp').style.width = '100px';
-          options.getElementById('htp').style.height = '100px';
-          options.getElementById('htp').style.borderRadius = '100px';
-          options.getElementById('htp').style.border = '3.5pt solid white';
-          options.getElementById('htp').style.cursor = 'pointer';
-          options.getElementById('htp').style.left = '230px';
-          options.getElementById('htp').style.top = '280px';
-          options.getElementById('htp').addEventListener('click', function() {
+          document.getElementById('money').style.position = 'fixed';
+          document.getElementById('money').style.top = '-5px';
+          document.getElementById('money').style.left = '10px';
+          document.getElementById('level').style.position = 'fixed';
+          document.getElementById('level').style.top = '-5px';
+          document.getElementById('level').style.right = '10px';
+          document.getElementById('htp').style.position = 'fixed';
+          document.getElementById('htp').style.background = 'yellow';
+          document.getElementById('htp').style.color = 'white';
+          document.getElementById('htp').style.fontSize = '20px';
+          document.getElementById('htp').style.width = '100px';
+          document.getElementById('htp').style.height = '100px';
+          document.getElementById('htp').style.borderRadius = '100px';
+          document.getElementById('htp').style.border = '3.5pt solid white';
+          document.getElementById('htp').style.cursor = 'pointer';
+          document.getElementById('htp').style.left = '230px';
+          document.getElementById('htp').style.top = '280px';
+          document.getElementById('htp').addEventListener('click', function() {
               
             alert('How To Play:\n\nClick Challenge 1 button to start playing the Ball game. Then, go to the green bar to get score. If you get 1000+ score, you get a dollar. Get $2s to unlock the Car, go somewhere around the green sqaure. If you did it, then the level increases. Be on level two to start the another challenge. It\'s much like a car game, but there is a timer for 30secs. If you win, your level increases. If you are on level 5, you can unlock ball bar mode which is chalenge 3. You should always start with 3pts. Hit the bar to get more points or else you lose the point. You can lose the game if you get 0 or less points. You win if you get 50 or more points. If you win the Ball Bar, you get a dollar. The level is also your score good luck!');
             
           });
           
-          options.getElementById('cash').style.width = '100px';
-          options.getElementById('cash').style.height = '100px';
-          options.getElementById('cash').style.color = 'white';
-          options.getElementById('cash').style.background = 'yellow';
-          options.getElementById('cash').style.fontSize = '18px';
-          options.getElementById('cash').style.borderRadius = '100px';
-          options.getElementById('cash').style.border = '3.5pt solid white';
-          options.getElementById('cash').style.cursor = 'pointer';
-          options.getElementById('cash').style.position = 'fixed';
-          options.getElementById('cash').style.top = '280px';
-          options.getElementById('cash').style.left = '10px';
-          options.getElementById('cash').addEventListener('click', function() {
+          document.getElementById('cash').style.width = '100px';
+          document.getElementById('cash').style.height = '100px';
+          document.getElementById('cash').style.color = 'white';
+          document.getElementById('cash').style.background = 'yellow';
+          document.getElementById('cash').style.fontSize = '18px';
+          document.getElementById('cash').style.borderRadius = '100px';
+          document.getElementById('cash').style.border = '3.5pt solid white';
+          document.getElementById('cash').style.cursor = 'pointer';
+          document.getElementById('cash').style.position = 'fixed';
+          document.getElementById('cash').style.top = '280px';
+          document.getElementById('cash').style.left = '10px';
+          document.getElementById('cash').addEventListener('click', function() {
               
             if ($ > limit) {
               alert('You\'ve Reached the money limit');
@@ -199,62 +190,62 @@ options.title = 'Bavalt';
             
           });
           
-          options.getElementById('cash').addEventListener('mousedown',function(){
-              options.getElementById('cash').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('cash').addEventListener('mousedown',function(){
+              document.getElementById('cash').style.background = 'rgb(174, 212, 51)';
           });
           
-          options.getElementById('bb').addEventListener('mousedown',function(){
-              options.getElementById('bb').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('bb').addEventListener('mousedown',function(){
+              document.getElementById('bb').style.background = 'rgb(174, 212, 51)';
           });
           
-          options.getElementById('car').addEventListener('mousedown',function(){
-              options.getElementById('car').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('car').addEventListener('mousedown',function(){
+              document.getElementById('car').style.background = 'rgb(174, 212, 51)';
           });
           
-          options.getElementById('htp').addEventListener('mousedown',function(){
-              options.getElementById('htp').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('htp').addEventListener('mousedown',function(){
+              document.getElementById('htp').style.background = 'rgb(174, 212, 51)';
           });
           
-          options.getElementById('challenge').addEventListener('mousedown',function(){
-              options.getElementById('challenge').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('challenge').addEventListener('mousedown',function(){
+              document.getElementById('challenge').style.background = 'rgb(174, 212, 51)';
           });
           
           addEventListener('mouseup',function(){
-              if(typeof options.getElementById('cash') !== 'undefined'){
-              options.getElementById('cash').style.background = 'yellow';
-              options.getElementById('htp').style.background = 'yellow';
-              options.getElementById('bb').style.background = 'yellow';
-              options.getElementById('car').style.background = 'yellow';
-              options.getElementById('challenge').style.background = 'yellow';
+              if(typeof document.getElementById('cash') !== 'undefined'){
+              document.getElementById('cash').style.background = 'yellow';
+              document.getElementById('htp').style.background = 'yellow';
+              document.getElementById('bb').style.background = 'yellow';
+              document.getElementById('car').style.background = 'yellow';
+              document.getElementById('challenge').style.background = 'yellow';
               
               }
           });
           
           
          draw4 = setInterval(function() {
-            options.getElementById('money').textContent = '$' + $;
+            document.getElementById('money').textContent = '$' + $;
             
           });
         }
 
         function Car() {
             clearInterval(draw4);
-            options.body.title = 'Car Game';
+            document.body.title = 'Car Game';
           var randomY = Math.floor(Math.random() * 200);
           var randomX = Math.floor(Math.random() * 300);
           var PlayerX = 600;
           var PlayerY = 600;
           
-          options.body.innerHTML = '<div id = "curpos"></div><h1 id = "coord"></h1><div id = "player"></div><button id = "cleft">Left</button><button id = "cright">Right</button><button id = "cup">Up</button><button id = "cdown">Down</button>';
+          document.body.innerHTML = '<div id = "curpos"></div><h1 id = "coord"></h1><div id = "player"></div><button id = "cleft">Left</button><button id = "cright">Right</button><button id = "cup">Up</button><button id = "cdown">Down</button><button id = "cleave">Leave</button>';
           
-          options.getElementById('player').style.background = 'yellow';
-          options.getElementById('player').style.width = '100px';
-          options.getElementById('player').style.height = '100px';
-          options.getElementById('player').style.borderRadius = '100px';
-          options.getElementById('player').style.border = '3.5pt solid white';
-          options.getElementById('player').style.position = 'fixed';
-          options.getElementById('player').style.top = '600px';
-          options.getElementById('player').style.left = '600px';
+          document.getElementById('player').style.background = 'yellow';
+          document.getElementById('player').style.width = '100px';
+          document.getElementById('player').style.height = '100px';
+          document.getElementById('player').style.borderRadius = '100px';
+          document.getElementById('player').style.border = '3.5pt solid white';
+          document.getElementById('player').style.position = 'fixed';
+          document.getElementById('player').style.top = '600px';
+          document.getElementById('player').style.left = '600px';
      
           var kl = false;
           var ku = false;
@@ -288,14 +279,36 @@ options.title = 'Bavalt';
             kd = false;
           });
 
-          var win = options.getElementById('curpos');
+          var win = document.getElementById('curpos');
           var CarBtn = {
-              'Left': options.getElementById('cleft'),
-              'Right': options.getElementById('cright'),
-              'Up': options.getElementById('cup'),
-              'Down': options.getElementById('cdown'),
+              'Left': document.getElementById('cleft'),
+              'Right': document.getElementById('cright'),
+              'Up': document.getElementById('cup'),
+              'Down': document.getElementById('cdown'),
+              'Leave': document.getElementById('cleave'),
           };
           
+          CarBtn['Leave'].style.position = 'fixed';
+          CarBtn['Leave'].style.left = '514px';
+          CarBtn['Leave'].style.top = '10px';
+          CarBtn['Leave'].style.width = '75px';
+          CarBtn['Leave'].style.height = '75px';
+          CarBtn['Leave'].style.borderRadius = '100px';
+          CarBtn['Leave'].style.fontSize = '12px';
+          CarBtn['Leave'].style.border = '5pt solid white';
+          CarBtn['Leave'].style.background = 'blue';
+          CarBtn['Leave'].style.color = 'white';
+          CarBtn['Leave'].style.cursor = 'pointer';
+          
+          CarBtn['Leave'].addEventListener('mousedown', function(){
+            CarBtn['Leave'].style.background = 'rgb(47, 38, 204)';
+        });
+        
+          CarBtn['Leave'].addEventListener('click', function(){
+              clearInterval(draw2);
+              Start();
+              });
+        
           CarBtn['Left'].addEventListener('mousedown',function(){
               kl = true;
               CarBtn['Left'].style.background = 'rgb(47, 38, 204)';
@@ -315,6 +328,7 @@ options.title = 'Bavalt';
               kd = true;
               CarBtn['Down'].style.background = 'rgb(47, 38, 204)';
           });
+          
           
           win.style.background = 'green';
           win.style.position = 'fixed';
@@ -376,19 +390,20 @@ options.title = 'Bavalt';
               kl = false;
               kr = false;
               
-              if(typeof options.getElementById('cup') !== 'undefined'){
+              if(typeof document.getElementById('cup') !== 'undefined'){
                   CarBtn['Left'].style.background = 'blue';
                   CarBtn['Right'].style.background = 'blue';
                   CarBtn['Up'].style.background = 'blue';
                   CarBtn['Down'].style.background = 'blue';
+                  CarBtn['Leave'].style.background = 'blue';
               }
           });
           
           
           var draw2 = setInterval(function() {
-            options.getElementById('coord').textContent = PlayerX + ', ' + PlayerY;
-            options.getElementById('player').style.left = PlayerX + 'px';
-            options.getElementById('player').style.top = PlayerY + 'px';
+            document.getElementById('coord').textContent = PlayerX + ', ' + PlayerY;
+            document.getElementById('player').style.left = PlayerX + 'px';
+            document.getElementById('player').style.top = PlayerY + 'px';
             if (challenge) {
               time -= 1;
             }
@@ -452,9 +467,9 @@ options.title = 'Bavalt';
 
         function Ball() {
           clearInterval(draw4);
-          options.body.innerHTML = '<div id = "ball"></div><button id = "left">Left</button><button id = "right">Right</button><div id = "ob"></div><h1 id = "ballpt"></h1>';
-          options.body.title = 'Ball Obstacle';
-          var ob = options.getElementById('ob');
+          document.body.innerHTML = '<div id = "ball"></div><button id = "left">Left</button><button id = "right">Right</button><div id = "ob"></div><h1 id = "ballpt"></h1><button id = "bl">Leave</button>';
+          document.body.title = 'Ball Obstacle';
+          var ob = document.getElementById('ob');
           ob.style.background = 'green';
           ob.style.width = '70px';
           ob.style.height = '10px';
@@ -464,13 +479,35 @@ options.title = 'Bavalt';
           
           var obY = -20;
           var obX = Math.floor(Math.random() * 400);
-          var LeftBtn = options.getElementById('left');
-          var RightBtn = options.getElementById('right');
-          var getBall = options.getElementById('ball');
+          var LeftBtn = document.getElementById('left');
+          var RightBtn = document.getElementById('right');
+          var bl = document.getElementById('bl');
+          var getBall = document.getElementById('ball');
           var ballX = 0;
           var ballLeft = false;
           var ballRight = false;
           
+          bl.style.position = 'fixed';
+          bl.style.left = '514px';
+          bl.style.top = '10px';
+          bl.style.width = '75px';
+          bl.style.height = '75px';
+          bl.style.borderRadius = '100px';
+          bl.style.fontSize = '12px';
+          bl.style.border = '5pt solid white';
+          bl.style.background = 'blue';
+          bl.style.color = 'white';
+          bl.style.cursor = 'pointer';
+          
+          bl.addEventListener('mousedown', function(){
+            bl.style.background = 'rgb(47, 38, 204)';
+          });
+        
+          bl.addEventListener('click', function(){
+            clearInterval(draw);
+            Start();
+          });
+              
           getBall.style.borderRadius = '200px';
           getBall.style.width = '100px';
           getBall.style.height = '100px';
@@ -520,6 +557,7 @@ options.title = 'Bavalt';
             if(typeof LeftBtn !== undefined){
                 LeftBtn.style.background = 'blue';
                 RightBtn.style.background = 'blue';
+                bl.style.background = 'blue';
             }
           });
           
@@ -540,8 +578,9 @@ options.title = 'Bavalt';
           });
           
           var Score = 0;
+          document.getElementById('ballpt').style.color = 'white';
           var draw = setInterval(function() {
-            options.getElementById('ballpt').textContent = Score;
+            document.getElementById('ballpt').textContent = Score;
             getBall.style.left = ballX + 'px';
             if (ballLeft && ballX > 0) {
               ballX = ballX - 2;
@@ -576,9 +615,9 @@ options.title = 'Bavalt';
         }
         
         function BallBar() {
-            options.body.innerHTML = '<button id = "bbl">Left</button><button id = "bbr">Right</button><div id = "bar"></div><div id = "ball-player"></div><h1 style = "color:white" id = "pt">'+Pt+'</h1>';
+            document.body.innerHTML = '<button id = "bbe">Leave</button><button id = "bbl">Left</button><button id = "bbr">Right</button><div id = "bar"></div><div id = "ball-player"></div><h1 style = "color:white" id = "pt">'+Pt+'</h1>';
             
-            options.body.title = 'Ball Bar';
+            document.body.title = 'Ball Bar';
             
             var BarBreak = 0;
             var bpX = 260;
@@ -589,15 +628,37 @@ options.title = 'Bavalt';
             var Pt = 3;
             var BarX = Math.floor(Math.random() * 500);
             
-            var Bar = options.getElementById('bar');
-            var Ball = options.getElementById('ball-player');
-            var PtEl = options.getElementById('pt');
+            var Bar = document.getElementById('bar');
+            var Ball = document.getElementById('ball-player');
+            var PtEl = document.getElementById('pt');
             
             var bbBtn = {
-                'left':options.getElementById('bbl'),
-                'right':options.getElementById('bbr'),
+                 'left':document.getElementById('bbl'),
+                'right':document.getElementById('bbr'),
+                'leave':document.getElementById('bbe'),
             };
             
+          bbBtn['leave'].style.position = 'fixed';
+          bbBtn['leave'].style.left = '514px';
+          bbBtn['leave'].style.top = '10px';
+          bbBtn['leave'].style.width = '75px';
+          bbBtn['leave'].style.height = '75px';
+          bbBtn['leave'].style.borderRadius = '100px';
+          bbBtn['leave'].style.fontSize = '12px';
+          bbBtn['leave'].style.border = '5pt solid white';
+          bbBtn['leave'].style.background = 'blue';
+          bbBtn['leave'].style.color = 'white';
+          bbBtn['leave'].style.cursor = 'pointer';
+          
+          bbBtn['leave'].addEventListener('mousedown', function(){
+            bbBtn['leave'].style.background = 'rgb(47, 38, 204)';
+          });
+        
+          bbBtn['leave'].addEventListener('click', function(){
+            clearInterval(draw5);
+            Start();
+          });
+          
           bbBtn['left'].style.cursor = 'pointer';
           bbBtn['left'].style.borderRadius = '200px';
           bbBtn['left'].style.width = '125px';
@@ -655,6 +716,7 @@ options.title = 'Bavalt';
                 if(typeof bbBtn['left'] !== 'undefined'){
                     bbBtn['left'].style.background = 'blue';
                     bbBtn['right'].style.background = 'blue';
+                    bbBtn['leave'].style.background = 'blue';
                 }
             });
             
@@ -742,9 +804,9 @@ options.title = 'Bavalt';
             });
         }
         
-        document.body.innerHTML = '<span style = "color:white;">v0.1.2 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
+        document.body.innerHTML = '<span style = "color:white;">v0.2.0 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
     
-        document.getElementById('start').addEventListener('click', Start);
+        document.getElementById('start').addEventListener('click', BallBar);
         
       }
 }
