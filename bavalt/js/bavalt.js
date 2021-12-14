@@ -806,7 +806,7 @@ document.title = 'Bavalt';
         
         document.body.innerHTML = '<span style = "color:white;">v0.2.0 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
     
-        document.getElementById('start').addEventListener('click', BallBar);
+        document.getElementById('start').addEventListener('click', Start);
         
       }
 }
