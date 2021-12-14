@@ -4,7 +4,7 @@
             document.body.contentEditable = true;
             document.body.style = 'background:black;color:white;font-family:monospace;';
         try {
-            if(typoef notAfunction!=='function'){
+            if(typeof notAfunction!=='function'){
                  return notAfunction[object];
                }
         
