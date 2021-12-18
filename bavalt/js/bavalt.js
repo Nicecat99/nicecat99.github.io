@@ -63,7 +63,7 @@ document.title = 'Bavalt';
           
           document.body.style.color = 'white';
           document.body.style.background = 'black';
-          document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "car">Buy Car</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
+          document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "level-up">Level Up</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
 
           document.getElementById('bb').style.position = 'fixed';
           document.getElementById('bb').style.top = '280px';
@@ -102,8 +102,8 @@ document.title = 'Bavalt';
           document.getElementById('challenge').style.borderRadius = '100px';
           document.getElementById('challenge').style.fontSize = '17px';
           document.getElementById('challenge').style.cursor = 'pointer';
-          document.getElementById('car').style.background = 'yellow';
-          document.getElementById('car').style.border = '3.5pt solid white';
+          document.getElementById('Level-Up').style.background = 'yellow';
+          document.getElementById('Level-Up').style.border = '3.5pt solid white';
           document.getElementById('challenge').style.position = 'fixed';
           document.getElementById('challenge').style.top = '280px';
           document.getElementById('challenge').style.left = '340px';
@@ -120,25 +120,25 @@ document.title = 'Bavalt';
             if ($ >= 3) {
               $ -= 2;
               challenge = true;
-              Car();
+              LevelUp();
             }
             
           });
             
-          document.getElementById('car').style.width = '100px';
-          document.getElementById('car').style.height = '100px';
-          document.getElementById('car').style.position = 'fixed';
-          document.getElementById('car').style.left = '120px';
-          document.getElementById('car').style.top = '280px';
-          document.getElementById('car').style.color = 'white';
-          document.getElementById('car').style.borderRadius = '100px';
-          document.getElementById('car').style.fontSize = '20px';
-          document.getElementById('car').style.cursor = 'pointer';
-          document.getElementById('car').addEventListener('click', function() {
+          document.getElementById('Level-Up').style.width = '100px';
+          document.getElementById('Level-Up').style.height = '100px';
+          document.getElementById('Level-Up').style.position = 'fixed';
+          document.getElementById('Level-Up').style.left = '120px';
+          document.getElementById('Level-Up').style.top = '280px';
+          document.getElementById('Level-Up').style.color = 'white';
+          document.getElementById('Level-Up').style.borderRadius = '100px';
+          document.getElementById('Level-Up').style.fontSize = '20px';
+          document.getElementById('Level-Up').style.cursor = 'pointer';
+          document.getElementById('Level-Up').addEventListener('click', function() {
               
             if ($ >= 2) {
               $ -= 2;
-              Car();
+              LevelUp();
             } else {
                 alert('You need $2s');
             }
@@ -164,7 +164,7 @@ document.title = 'Bavalt';
           document.getElementById('htp').style.top = '280px';
           document.getElementById('htp').addEventListener('click', function() {
               
-            alert('How To Play:\n\nClick Challenge 1 button to start playing the Ball game. Then, go to the green bar to get score. If you get 1000+ score, you get a dollar. Get $2s to unlock the Car, go somewhere around the green sqaure. If you did it, then the level increases. Be on level two to start the another challenge. It\'s much like a car game, but there is a timer for 30secs. If you win, your level increases. If you are on level 5, you can unlock ball bar mode which is chalenge 3. You should always start with 3pts. Hit the bar to get more points or else you lose the point. You can lose the game if you get 0 or less points. You win if you get 50 or more points. If you win the Ball Bar, you get a dollar. The level is also your score good luck!');
+            alert('How To Play:\n\nClick Challenge 1 button to start playing the Ball game. Then, go to the green bar to get score. If you get 1000+ score, you get a dollar. Get $2s to unlock the Level Up, go somewhere around the green sqaure. If you did it, then the level increases. Be on level two to start the another challenge. It\'s much like a Level Up game, but there is a timer for 30secs. If you win, your level increases. If you are on level 5, you can unlock ball bar mode which is chalenge 3. You should always start with 3pts. Hit the bar to get more points or else you lose the point. You can lose the game if you get 0 or less points. You win if you get 50 or more points. If you win the Ball Bar, you get a dollar. The level is also your score good luck!');
             
           });
           
@@ -198,8 +198,8 @@ document.title = 'Bavalt';
               document.getElementById('bb').style.background = 'rgb(174, 212, 51)';
           });
           
-          document.getElementById('car').addEventListener('mousedown',function(){
-              document.getElementById('car').style.background = 'rgb(174, 212, 51)';
+          document.getElementById('Level-Up').addEventListener('mousedown',function(){
+              document.getElementById('Level-Up').style.background = 'rgb(174, 212, 51)';
           });
           
           document.getElementById('htp').addEventListener('mousedown',function(){
@@ -215,7 +215,7 @@ document.title = 'Bavalt';
               document.getElementById('cash').style.background = 'yellow';
               document.getElementById('htp').style.background = 'yellow';
               document.getElementById('bb').style.background = 'yellow';
-              document.getElementById('car').style.background = 'yellow';
+              document.getElementById('Level-Up').style.background = 'yellow';
               document.getElementById('challenge').style.background = 'yellow';
               
               }
@@ -228,11 +228,11 @@ document.title = 'Bavalt';
           });
         }
 
-        function Car() {
+        function LevelUp() {
             clearInterval(draw4);
-            document.body.title = 'Car Game';
-          var randomY = Math.floor(Math.random() * 200);
-          var randomX = Math.floor(Math.random() * 300);
+            document.body.title = 'Level-Up Game';
+          var randomY = Math.floor(Math.random() * 170);
+          var randomX = Math.floor(Math.random() * 270);
           var PlayerX = 600;
           var PlayerY = 600;
           
@@ -280,7 +280,7 @@ document.title = 'Bavalt';
           });
 
           var win = document.getElementById('curpos');
-          var CarBtn = {
+          var luBtn = {
               'Left': document.getElementById('cleft'),
               'Right': document.getElementById('cright'),
               'Up': document.getElementById('cup'),
@@ -288,45 +288,45 @@ document.title = 'Bavalt';
               'Leave': document.getElementById('cleave'),
           };
           
-          CarBtn['Leave'].style.position = 'fixed';
-          CarBtn['Leave'].style.left = '514px';
-          CarBtn['Leave'].style.top = '10px';
-          CarBtn['Leave'].style.width = '75px';
-          CarBtn['Leave'].style.height = '75px';
-          CarBtn['Leave'].style.borderRadius = '100px';
-          CarBtn['Leave'].style.fontSize = '12px';
-          CarBtn['Leave'].style.border = '5pt solid white';
-          CarBtn['Leave'].style.background = 'blue';
-          CarBtn['Leave'].style.color = 'white';
-          CarBtn['Leave'].style.cursor = 'pointer';
+          luBtn['Leave'].style.position = 'fixed';
+          luBtn['Leave'].style.left = '514px';
+          luBtn['Leave'].style.top = '10px';
+          luBtn['Leave'].style.width = '75px';
+          luBtn['Leave'].style.height = '75px';
+          luBtn['Leave'].style.borderRadius = '100px';
+          luBtn['Leave'].style.fontSize = '12px';
+          luBtn['Leave'].style.border = '5pt solid white';
+          luBtn['Leave'].style.background = 'blue';
+          luBtn['Leave'].style.color = 'white';
+          luBtn['Leave'].style.cursor = 'pointer';
           
-          CarBtn['Leave'].addEventListener('mousedown', function(){
-            CarBtn['Leave'].style.background = 'rgb(47, 38, 204)';
+          luBtn['Leave'].addEventListener('mousedown', function(){
+            luBtn['Leave'].style.background = 'rgb(47, 38, 204)';
         });
         
-          CarBtn['Leave'].addEventListener('click', function(){
+          luBtn['Leave'].addEventListener('click', function(){
               clearInterval(draw2);
               Start();
               });
         
-          CarBtn['Left'].addEventListener('mousedown',function(){
+          luBtn['Left'].addEventListener('mousedown',function(){
               kl = true;
-              CarBtn['Left'].style.background = 'rgb(47, 38, 204)';
+              luBtn['Left'].style.background = 'rgb(47, 38, 204)';
           });
           
-          CarBtn['Right'].addEventListener('mousedown',function(){
+          luBtn['Right'].addEventListener('mousedown',function(){
               kr = true;
-              CarBtn['Right'].style.background = 'rgb(47, 38, 204)';
+              luBtn['Right'].style.background = 'rgb(47, 38, 204)';
           });
           
-          CarBtn['Up'].addEventListener('mousedown',function(){
+          luBtn['Up'].addEventListener('mousedown',function(){
               ku = true;
-              CarBtn['Up'].style.background = 'rgb(47, 38, 204)';
+              luBtn['Up'].style.background = 'rgb(47, 38, 204)';
           });
           
-          CarBtn['Down'].addEventListener('mousedown',function(){
+          luBtn['Down'].addEventListener('mousedown',function(){
               kd = true;
-              CarBtn['Down'].style.background = 'rgb(47, 38, 204)';
+              luBtn['Down'].style.background = 'rgb(47, 38, 204)';
           });
           
           
@@ -336,53 +336,53 @@ document.title = 'Bavalt';
           win.style.width = '10px';
           win.style.height = '10px';
           
-          CarBtn['Up'].style.cursor = 'pointer';
-          CarBtn['Up'].style.borderRadius = '200px';
-          CarBtn['Up'].style.width = '125px';
-          CarBtn['Up'].style.height = '125px';
-          CarBtn['Up'].style.border = '3.5pt solid white';
-          CarBtn['Up'].style.background = 'blue';
-          CarBtn['Up'].style.color = 'white';
-          CarBtn['Up'].style.fontSize = '40px';
-          CarBtn['Up'].style.position = 'fixed';
-          CarBtn['Up'].style.left = '170px';
-          CarBtn['Up'].style.top = '260px';
+          luBtn['Up'].style.cursor = 'pointer';
+          luBtn['Up'].style.borderRadius = '200px';
+          luBtn['Up'].style.width = '125px';
+          luBtn['Up'].style.height = '125px';
+          luBtn['Up'].style.border = '3.5pt solid white';
+          luBtn['Up'].style.background = 'blue';
+          luBtn['Up'].style.color = 'white';
+          luBtn['Up'].style.fontSize = '40px';
+          luBtn['Up'].style.position = 'fixed';
+          luBtn['Up'].style.left = '170px';
+          luBtn['Up'].style.top = '260px';
           
-          CarBtn['Down'].style.cursor = 'pointer';
-          CarBtn['Down'].style.borderRadius = '200px';
-          CarBtn['Down'].style.width = '125px';
-          CarBtn['Down'].style.height = '125px';
-          CarBtn['Down'].style.border = '3.5pt solid white';
-          CarBtn['Down'].style.background = 'blue';
-          CarBtn['Down'].style.color = 'white';
-          CarBtn['Down'].style.fontSize = '40px';
-          CarBtn['Down'].style.position = 'fixed';
-          CarBtn['Down'].style.left = '310px';
-          CarBtn['Down'].style.top = '260px';
+          luBtn['Down'].style.cursor = 'pointer';
+          luBtn['Down'].style.borderRadius = '200px';
+          luBtn['Down'].style.width = '125px';
+          luBtn['Down'].style.height = '125px';
+          luBtn['Down'].style.border = '3.5pt solid white';
+          luBtn['Down'].style.background = 'blue';
+          luBtn['Down'].style.color = 'white';
+          luBtn['Down'].style.fontSize = '40px';
+          luBtn['Down'].style.position = 'fixed';
+          luBtn['Down'].style.left = '310px';
+          luBtn['Down'].style.top = '260px';
           
-          CarBtn['Left'].style.cursor = 'pointer';
-          CarBtn['Left'].style.borderRadius = '200px';
-          CarBtn['Left'].style.width = '125px';
-          CarBtn['Left'].style.height = '125px';
-          CarBtn['Left'].style.border = '3.5pt solid white';
-          CarBtn['Left'].style.background = 'blue';
-          CarBtn['Left'].style.color = 'white';
-          CarBtn['Left'].style.fontSize = '40px';
-          CarBtn['Left'].style.position = 'fixed';
-          CarBtn['Left'].style.left = '30px';
-          CarBtn['Left'].style.top = '260px';
+          luBtn['Left'].style.cursor = 'pointer';
+          luBtn['Left'].style.borderRadius = '200px';
+          luBtn['Left'].style.width = '125px';
+          luBtn['Left'].style.height = '125px';
+          luBtn['Left'].style.border = '3.5pt solid white';
+          luBtn['Left'].style.background = 'blue';
+          luBtn['Left'].style.color = 'white';
+          luBtn['Left'].style.fontSize = '40px';
+          luBtn['Left'].style.position = 'fixed';
+          luBtn['Left'].style.left = '30px';
+          luBtn['Left'].style.top = '260px';
           
-          CarBtn['Right'].style.cursor = 'pointer';
-          CarBtn['Right'].style.borderRadius = '200px';
-          CarBtn['Right'].style.width = '125px';
-          CarBtn['Right'].style.height = '125px';
-          CarBtn['Right'].style.border = '3.5pt solid white';
-          CarBtn['Right'].style.background = 'blue';
-          CarBtn['Right'].style.color = 'white';
-          CarBtn['Right'].style.fontSize = '40px';
-          CarBtn['Right'].style.position = 'fixed';
-          CarBtn['Right'].style.left = '450px';
-          CarBtn['Right'].style.top = '260px';
+          luBtn['Right'].style.cursor = 'pointer';
+          luBtn['Right'].style.borderRadius = '200px';
+          luBtn['Right'].style.width = '125px';
+          luBtn['Right'].style.height = '125px';
+          luBtn['Right'].style.border = '3.5pt solid white';
+          luBtn['Right'].style.background = 'blue';
+          luBtn['Right'].style.color = 'white';
+          luBtn['Right'].style.fontSize = '40px';
+          luBtn['Right'].style.position = 'fixed';
+          luBtn['Right'].style.left = '450px';
+          luBtn['Right'].style.top = '260px';
           
           addEventListener('mouseup',function(){
               ku = false;
@@ -391,11 +391,11 @@ document.title = 'Bavalt';
               kr = false;
               
               if(typeof document.getElementById('cup') !== 'undefined'){
-                  CarBtn['Left'].style.background = 'blue';
-                  CarBtn['Right'].style.background = 'blue';
-                  CarBtn['Up'].style.background = 'blue';
-                  CarBtn['Down'].style.background = 'blue';
-                  CarBtn['Leave'].style.background = 'blue';
+                  luBtn['Left'].style.background = 'blue';
+                  luBtn['Right'].style.background = 'blue';
+                  luBtn['Up'].style.background = 'blue';
+                  luBtn['Down'].style.background = 'blue';
+                  luBtn['Leave'].style.background = 'blue';
               }
           });
           
@@ -804,7 +804,7 @@ document.title = 'Bavalt';
             });
         }
         
-        document.body.innerHTML = '<span style = "color:white;">v0.2.0 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
+        document.body.innerHTML = '<span style = "color:white;">v0.2.1 Alpha</span><h1 style = "position:fixed;color:white;font-size:75px;left:190px;top:70px;">Bavalt</h1><h3 style = "color:white;font-size:35px;position:fixed;left:200px;top:170px;cursor:pointer;" id = "start">Click to start</h3>';
     
         document.getElementById('start').addEventListener('click', Start);
         
