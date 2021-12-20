@@ -1,5 +1,3 @@
-
-try {
 var that;
 that = document.createElement('head');
 document.querySelector('html').appendChild(that);
@@ -63,7 +61,7 @@ document.title = 'Bavalt';
           
           document.body.style.color = 'white';
           document.body.style.background = 'black';
-          document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "level-up">Level Up</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
+          document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "Level-Up">Level Up</button><h1 id = "level">Level ' + limit + '</h1><h1 id = "money">$' + $ + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
 
           document.getElementById('bb').style.position = 'fixed';
           document.getElementById('bb').style.top = '280px';
@@ -809,9 +807,3 @@ document.title = 'Bavalt';
         document.getElementById('start').addEventListener('click', Start);
         
       }
-}
-
-catch(error){
-    document.body.style = 'background:black;color:white;font-family:sans-serif;';
-    document.body.innerHTML = '<h1>Something Went Wrong:</h1><h2>' + error + '</h2>';
-}
