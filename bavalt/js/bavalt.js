@@ -1,3 +1,4 @@
+
 var that;
 that = document.createElement('head');
 document.querySelector('html').appendChild(that);
@@ -807,3 +808,4 @@ document.title = 'Bavalt';
         document.getElementById('start').addEventListener('click', Start);
         
       }
+
