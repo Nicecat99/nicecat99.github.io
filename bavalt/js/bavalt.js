@@ -808,4 +808,3 @@ document.title = 'Bavalt';
         document.getElementById('start').addEventListener('click', Start);
         
       }
-
