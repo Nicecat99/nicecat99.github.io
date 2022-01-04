@@ -3,7 +3,7 @@
 
 - ### Link: https://nicecat99.github.io/
 - ### By: Nicecat99
-- ### Powered: [Github](https://github.com)
+- ### Made with: [Github](https://github.com)
 - ### Started In: 11/19/2021
 
 ### [Have Fun!](https://nicecat99.github.io/bavalt/js/)
