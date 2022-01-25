@@ -1,12 +1,12 @@
             a {
                 color: black;
-                font-family: "Trebuchet MS";
+                font-family: monospace;
             }
             
             html {
                 margin: 0;
                 padding: 0;
-                background: white;
+                background: grey;
                 color: black;
-                font-family: "Trebuchet MS";
+                font-family: monospace;
             }
