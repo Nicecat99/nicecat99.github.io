@@ -8,7 +8,7 @@ string dir("");
 int frame = 0;
 bool lose;
 void setup() {
-  system("clear");
+  system("cls");
   lose = false;
   score = 0;
   obX = 0;
@@ -24,7 +24,7 @@ void lost(){
   obY = 0;
   x = width / 2;
   y = height / 2;
-  system("clear");
+  system("cls");
   cout << "OUCH HELP AN ENEMY!!!!!" << endl;
   cout << "It looks like you lost! Try again? Type \"y\" to respawn." << endl;
   cin >> replay;
@@ -34,7 +34,7 @@ void lost(){
     replay = "";
   } else {
     lose = false;
-    system("clear");
+    system("cls");
   }
   
   
@@ -42,12 +42,12 @@ void lost(){
 
 // draw
 void draw() {
-  system("clear");
+  system("cls");
   cout << "\n" << endl;
 // Draw Map
   for (int i = 0; i < width + 2; i++) {
     cout << "-";
-    system("clear");
+    system("cls");
   }
 
   cout << endl;
@@ -127,7 +127,7 @@ void PreDraw() {
     cout << "Go (w, a, s, or d): ";
     cin >> dir;
     cout << endl;
-    system("clear");
+    system("cls");
   }
 
   if(
@@ -143,7 +143,7 @@ void PreDraw() {
 
 int main() {
   // Clear Console
-  system("clear");
+  system("cls");
 
   // Intro
   cout << "Welcome to Ladder Climb!" << endl;
