@@ -1,12 +1,12 @@
             a {
                 color: black;
-                font-family: monospace;
+                font-family: "calibri";
             }
             
             html {
                 margin: 0;
                 padding: 0;
-                background: grey;
+                background: rgb(0, 50, 50);
                 color: black;
-                font-family: monospace;
+                font-family: "Trebuchet MS";
             }
