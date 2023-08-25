@@ -2,3 +2,22 @@
            position:fixed;
            left:0px;
           }
+
+       #LOAD {
+              animation-name: load;
+              animation-duration: 3.5s;
+              opacity: 0;
+              width:9999999px;
+              height:9999999px;
+              position:fixed;
+              margin: 0;
+              background: black;
+       }
+
+@keyframes load {
+       from {
+              opacity: 1;
+       } to {
+              opacity: 0;
+       }
+}
