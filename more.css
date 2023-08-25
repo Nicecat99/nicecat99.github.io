@@ -5,7 +5,7 @@
 
        #LOAD {
               animation-name: load;
-              animation-duration: 5s;
+              animation-duration: 4s;
               opacity: 0;
               width:9999999px;
               height:9999999px;
@@ -13,16 +13,14 @@
               left: 0px;
               top: 0px;
               background: black;
-              display:block;
        }
 
        #TEXT {
               animation-name: load;
-              animation-duration: 5s;
+              animation-duration: 4s;
               opacity: 0;
               font-size: 100px;
               position: fixed;
-              display:block;
               top: 20px;
               
        }
