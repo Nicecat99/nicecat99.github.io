@@ -13,6 +13,7 @@
               left: 0px;
               top: 0px;
               background: black;
+              display:block;
        }
 
        #TEXT {
@@ -21,6 +22,7 @@
               opacity: 0;
               font-size: 100px;
               position: fixed;
+              display:block;
               top: 20px;
               
        }
