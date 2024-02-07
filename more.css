@@ -12,6 +12,13 @@
               animation-duration:3s;
        }
 
+
+       .btn {
+              width:100px;
+              height:50px;
+              
+       }
+
 @keyframes fade {
        from {
               opacity: 0;
