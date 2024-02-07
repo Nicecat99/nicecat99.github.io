@@ -20,6 +20,13 @@
               cursor:pointer;
        }
 
+       .btn2 {
+              width:150px;
+              height:100px;
+              background: rgb(0,40,40);
+              cursor:pointer;
+       }
+
        .under {
               text-decoration: none;
               font-size:30px;
