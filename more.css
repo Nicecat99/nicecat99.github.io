@@ -18,7 +18,7 @@
               height:50px;
               background: rgb(0,40,40);
               cursor:pointer;
-              
+              text-decoration:none;
        }
 
 @keyframes fade {
