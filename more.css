@@ -2,33 +2,3 @@
            position:fixed;
            left:0px;
           }
-
-       #LOAD {
-              animation-name: load;
-              animation-duration: 4s;
-              opacity: 0;
-              width:9999999px;
-              height:9999999px;
-              position:fixed;
-              left: 0px;
-              top: 0px;
-              background: black;
-       }
-
-       #TEXT {
-              animation-name: load;
-              animation-duration: 4s;
-              opacity: 0;
-              font-size: 100px;
-              position: fixed;
-              top: 20px;
-              
-       }
-
-@keyframes load {
-       from {
-              opacity: 1;
-       } to {
-              opacity: 0;
-       }
-}
