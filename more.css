@@ -27,6 +27,16 @@
               font-size:30px;
        }
 
+       .btn2 {
+              width:175px;
+              height:125px;
+              background: rgb(0,40,40);
+              cursor:pointer;
+              border: 5px solid white;
+              border-radius: 10px;
+              color:white;
+              font-size:30px;
+       }
        .under {
               text-decoration: none;
        }
