@@ -6,30 +6,8 @@
 
 
        .btn {
-              width:150px;
-              height:70px;
-              background: rgb(0,40,40);
-              cursor:pointer;
-              border: 5px solid white;
-              border-radius: 10px;
-              color:white;
-              font-size:30px;
-       }
-
-       .btn2 {
-              width:150px;
-              height:100px;
-              background: rgb(0,40,40);
-              cursor:pointer;
-              border: 5px solid white;
-              border-radius: 10px;
-              color:white;
-              font-size:30px;
-       }
-
-       .btn3 {
               width:250px;
-              height:175px;
+              height:170px;
               background: rgb(0,40,40);
               cursor:pointer;
               border: 5px solid white;
