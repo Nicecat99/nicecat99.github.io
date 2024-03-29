@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://nicecat99.github.io/bavalt.ico">
+    <title>Options | Bavalt</title>
+        <style>
+      a {
+         color: white;
+      }
+      
+      .size {
+        width: 599px;
+        height: 400px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+      }
+      
+      body {
+         margin: 0;
+         padding: 0;
+         color: white;
+         font-family: sans-serif;
+         background: rgb(0, 0, 0);
+      }
+          .btn {
+            cursor:pointer;
+            background: grey;
+            color: white;
+            font-family: sans-serif;
+            font-size:30px;
+            border-radius:5px;
+            border:5px solid white;
+          }
+    </style>
+  </head>
+  <body>
+    <script>
+      let code = `
+      <center>
+      <img src="https://nicecat99.github.io/bavalt.ico"></img><br>
+      <h1>Settings</h1><br>
+            <a href="https://nicecat99.github.io/bavalt/Bavalt.zip" download><button class="btn">Download bavalt</button></a>
+      <br><br>
+    <button onclick="btn1()" class="btn">Info</button>
+      <br><br>
+     <button onclick="btn2()" class="btn">Need Help?</button>
+     <br><br>
+     <button onclick="javascript:opener.history.go(-1);close();" class="btn">Go back</button>
+     <br><br>
+     <button onclick="btn3()" class="btn">Nicecat99's Website</button>
+     <br><br>
+    <button onclick="launch();" class="btn">Launch in Window</button></center>
+      `;
+      
+      function E(){
+        document.body.innerHTML = code;
+      }
+
+      function btn1(){
+        opener.document.body.innerHTML = '<meta http-equiv="refresh" content="0;URL=https://nicecat99.github.io/info/bavalt">';
+        close();
+      }
+
+    function btn2(){
+        opener.document.body.innerHTML = '<meta http-equiv="refresh" content="0;URL=https://nicecat99.github.io/info/bavalt#help">';
+        close();
+    }
+
+    function btn3(){
+      opener.document.body.innerHTML = '<meta http-equiv="refresh" content="0;URL=https://nicecat99.github.io">';
+      close();
+    }
+
+        function launch(){
+        window.open("window.html", "Bavalt", "width=599 height=400 resizable=no");
+        //Checks if pop-up is enabled
+        setTimeout(1000,function(){
+          set(false);
+        if(!test){
+          alert('Launching Failed, make sure to enable pop-up');
+        } else {
+          close();
+        }
+        });
+      }
+      
+      if(!opener){
+        document.body.innerHTML='<h1>Access Denied<h1>';
+      } else {
+        E();
+      }
+    </script>
+  </body>
+</html>

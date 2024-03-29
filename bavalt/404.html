@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+         margin: 0;
+         padding: 0;
+         color: white;
+         font-family: sans-serif;
+         background: rgb(0, 0, 0);
+      }
+ 
+      #ball {
+        background:yellow;
+        width:150px;
+        height:150px;
+        position:fixed;
+        left:10px;
+        top: 140px;
+        border-radius: 100px;
+        border: 3pt solid white;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>Not Found | Bavalt</title>
+  </head> 
+  <body>
+    <h1>Whoopsie!</h1>
+    <h2>Not found</h2>
+    <h2><a href="https://nicecat99.github.io/bavalt">Main Page</a></h2>
+    <div id="ball"></div>
+    <script>
+      let ballX = 10;
+      let speed = 5;
+      setInterval(function(){
+        ballX += speed;
+        ball.style.left = ballX + 'px';
+        if(ballX > innerWidth-100){
+          speed = -1.25;
+        }
+
+        if(ballX < 0){
+          speed = 1.25;
+        }
+      });
+    </script>
+  </body>
+</html>
