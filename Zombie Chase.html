@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Zombie Attack</title>
+        <meta name="viewport" 
+      content="width=device-width, initial-scale=0.4, maximum-scale=1.0, user-scalable=no">
+        <style>
+            
+            *{
+                background: rgb(0,0,100);
+                user-select: none;
+            }
+
+
+            #enemy {
+                width: 120px;
+                height: 120px;
+                position: fixed;
+                display: none;
+            }
+
+            #obstacle {
+                background: brown;
+                width:100px;
+                height:100px;
+                border: 10px solid white;
+                position: fixed;
+                display: none;
+            }
+
+            #player {
+                width: 120px;
+                height: 120px;
+                position: fixed;
+                display: none;
+            }
+
+            #health {
+                color:white;
+                text-align: center;
+                font-family:monospace;
+                font-size:40px;
+                display: none;
+            }
+
+            #btnLeft {
+                width:150px;
+                height:50px;
+                font-size:30px;
+                position:fixed;
+                left: 10px;
+                bottom: 10px;
+                background: blue;
+                border: 10px solid white;
+                color: white;
+                font-family: monospace;
+                cursor: pointer;
+                display: none;
+            }
+
+            #btnRight {
+                width:150px;
+                height:50px;
+                font-size:30px;
+                position:fixed;
+                right: 10px;
+                bottom: 10px;
+                background: blue;
+                border: 10px solid white;
+                color: white;
+                font-family: monospace;
+                cursor: pointer;
+                display: none;
+            }
+
+            #btnUp {
+                width:150px;
+                height:50px;
+                font-size:30px;
+                position:fixed;
+                left: 250px;
+                bottom: 10px;
+                background: blue;
+                border: 10px solid white;
+                color: white;
+                font-family: monospace;
+                cursor: pointer;
+                display: none;
+            }
+
+            #btnDown {
+                width:150px;
+                height:50px;
+                font-size:30px;
+                position:fixed;
+                right: 250px;
+                bottom: 10px;
+                background: blue;
+                border: 10px solid white;
+                color: white;
+                font-family: monospace;
+                cursor: pointer;
+                display: none;
+            }
+
+            #LOADER {
+                color:white;
+                text-align: center;
+                font-family:monospace;
+                font-size:40px;
+            }
+        </style>
+        <script>
+let lose = false;
+let main = false;
+let LEFT = false;
+let RIGHT = false;
+let UP = false;
+let DOWN = false;
+let gameScene;
+let start = true;
+let tick = 0;
+let ammo = 0;
+let oX = innerWidth / 2 - 60;
+let oY = -100;
+
+            
+let scenegame = `
+<h1 id="health">Health: 100 | Score: 0</h1>
+
+        <img src="https://nicecat99.github.io/resource/Zombie Chase/player.svg" id="player">
+        <img src="https://nicecat99.github.io/resource/Zombie Chase/Zombie.svg" id="enemy">
+        <button type="button" id="btnLeft">Left</button>
+        <button type="button" id="btnRight">Right</button>
+        <button type="button" id="btnUp">Up</button>
+        <button type="button" id="btnDown">Down</button><div id="obstacle"></div>
+        <audio id="attackSfx" src="https://nicecat99.github.io/resource/Zombie Chase/player-damage.mp3"></audio>
+<h1 id="LOADER">Loading...</h1>
+
+`;
+Load = function(){
+if(!!(typeof btnLeft)){
+btnLeft.addEventListener('touchstart',function(){
+    LEFT = true;
+});
+
+btnUp.addEventListener('touchstart',function(){
+    UP = true;
+});
+
+btnDown.addEventListener('touchstart',function(){
+    DOWN = true;
+});
+
+btnRight.addEventListener('touchstart',function(){
+    RIGHT = true;
+});
+    
+addEventListener('touchend', function(){
+      LEFT = false;
+      RIGHT = false;
+      UP = false;
+      DOWN = false;
+});
+    
+btnLeft.onmousedown=function(){
+    LEFT = true;
+};
+
+btnRight.onmousedown = function(){
+    RIGHT = true;
+};
+
+btnUp.onmousedown = function(){
+    UP = true;
+};
+
+btnDown.onmousedown = function(){
+    DOWN = true;
+};
+    
+};
+
+};
+
+onmouseup = function(){
+    LEFT = false;
+    RIGHT = false;
+    UP = false;
+    DOWN = false;
+};
+
+let keyPress;
+let key = {};
+let hp = 100;
+let x = innerWidth/2-60;
+let y = innerHeight/2-60;
+let eDeg = 0;
+function pos(a,b){
+    player.style.left = a + 'px';
+    player.style.top = b + 'px';
+}
+
+let eX = 0;
+let eY = 0;
+
+function ePos(a,b){
+       enemy.style.left = a + 'px';
+       enemy.style.top = b + 'px';
+}
+
+function eDir(a){
+    enemy.style.rotate = a + 'deg';
+}
+            
+function oPos(a,b){
+    obstacle.style.left = a + 'px';
+    obstacle.style.top = b + 'px';
+}
+            
+onkeydown = function(a){
+    key[a.key] = true;
+    keyPress = true;
+};
+
+onkeyup = function(a){
+    delete key[a.key];
+    keyPress = false;
+    LEFT = false;
+    RIGHT = false;
+    UP = false;
+    DOWN = false;
+};
+
+function control(){
+    Load();
+    if(LOADED){
+        LOADER.style.display = 'none';
+        enemy.style.display ='block';
+        player.style.display = 'block';
+        obstacle.style.display = 'block';
+        btnLeft.style.display = 'block';
+        btnUp.style.display = 'block';
+        btnDown.style.display = 'block';
+        btnRight.style.display = 'block';
+        health.style.display = 'block';
+    } else {
+        LOADER.style.display = 'block';
+        enemy.style.display ='none';
+        player.style.display = 'none';
+        obstacle.style.display = 'none';
+        btnLeft.style.display = 'none';
+        btnUp.style.display = 'none';
+        btnDown.style.display = 'none';
+        btnRight.style.display = 'none';
+        health.style.display = 'none';
+    }
+    
+    eDeg = (x+y)/5 + 360;
+    if(tick%300 > 298){
+        ammo++;
+    }
+    
+    tick++;
+    if(hp > 100) {
+        hp = 100;
+    }
+
+    if(tick%300 > 298) {
+        hp++;
+    }
+
+    if(x > innerWidth-135){
+        x = innerWidth-135;
+    }
+
+    oY+=3;
+
+    if(oY > innerHeight + 200){
+        oX = Math.floor(Math.random() * (innerWidth-200));
+        oY = -200;
+    }
+    
+    if(x < 0){
+        x=0;
+    }
+
+    if(y < 100){
+        y = 100;
+    }
+
+    if(y > innerHeight-200){
+        y = innerHeight-200;
+    }
+
+    if(LEFT){
+        x-=7;
+    }
+
+    if(RIGHT){
+        x+=7;
+    }
+
+    if(UP){
+        y-=7;
+    }
+
+    if(DOWN){
+        y+=7;
+    }
+    
+    if(keyPress){
+        if(key.a | key.ArrowLeft){
+            LEFT=true;
+        }
+
+        if(key.d | key.ArrowRight){
+            RIGHT=true;
+        }
+
+        if(key.w | key.ArrowUp){
+            UP=true;
+        }
+
+        if(key.s | key.ArrowDown){
+            DOWN=true;
+        }
+
+
+    }
+
+        if(eX < x){
+            eX+=2;
+        }
+
+        if(eX > x){
+            eX-=2;
+        }
+
+        if(eY > y){
+            eY-=2;
+        }
+
+        if(eY < y){
+            eY+=2;
+        }
+
+    if(oX >= x-120 && oY >= y-120 && oX <= x+120 && oY <= y+120){
+        hp-=0.1;
+        attackSfx.play();
+    }
+
+    
+    if(eX >= x-120 && eY >= y-120 && eX <= x+120 && eY <= y+120){
+        hp-=0.5;
+        attackSfx.play();
+    }
+
+    if(hp < 1){
+        lose = true;
+    }
+    
+    health.innerText = 'Health: ' + parseInt(hp) + ' | Score: ' + ammo;
+}
+
+let j;
+let l;
+    function again(){
+        ammo = 0;
+        clearTimeout(j);
+        start=false;
+        hp=100;
+        lose=false;
+        x = innerWidth/2 - 60;
+        y = innerHeight/2 - 60;
+        eX = 0;
+        eY = 0;
+        setTimeout(LOADING,5000);
+        document.body.innerHTML = scenegame;
+    }    
+            
+    function Lose(){
+if(start){
+        document.body.innerHTML='<h1 style="font-family:monospace;text-align:center;color:white;font-size:50px;">Starting...</h1>';
+} else {
+        document.body.innerHTML='<h1 style="font-family:monospace;text-align:center;color:white;">Trying Again...</h1>';
+    }
+
+
+j = setTimeout(again, 1000);
+    }
+
+let LOADED = false;
+function LOADING(){
+    LOADED = true;
+}  
+            
+function Main(){
+    if(start){
+        lose = true;
+    }
+    if(lose){
+        LOADED = false;
+        tick=0;
+        Lose();
+    }
+     
+    else {
+        ePos(eX, eY);
+        pos(x,y);
+        oPos(oX, oY);
+        eDir(eDeg);
+        control();
+    }
+}
+
+setInterval(Main);
+        </script>
+    </head>
+    <body>
+<h1>LOADING FAILED</h1>
+    </body>
+</html>
