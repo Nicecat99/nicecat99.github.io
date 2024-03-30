@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Local Storage Test</title>
+  </head>
+  <body>
+    <script>
+      var e;
+      if(localStorage.getItem('data') == undefined){
+      e = prompt('Enter text if u want to');
+      }
+      if(!!e){
+        localStorage.setItem('data',e);
+      }
+      
+      alert('Saved text: ' + localStorage.getItem('data'));
+    </script>
+  </body>
+</html>

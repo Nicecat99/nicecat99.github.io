@@ -1,0 +1,21 @@
+<!DOCTYPE html> <html onclick="quiz()"> <head> <meta charset="utf-8"> <title>Random Math Quiz</title> </head> <body>
+  Click anywhere
+  <noscript><h1>MAKE SURE JAVASCRIPT IS ENABLED</h1></noscript>
+<script> 
+function randNum(max){ 
+return Math.floor(Math.random() * max); }
+var random1;
+var random2;
+var Quiz;
+function quiz(){
+  random1 = randNum(100);
+  random2 = randNum(100);
+Quiz = prompt('what is ' + random1 + ' + ' + random2 + '?');
+
+if(Quiz == random1 + random2){
+alert('Correct'); 
+} else {
+alert('Incorrect, the answer is ' + (random1 + random2));
+}  
+}
+</script> </body> </html>
