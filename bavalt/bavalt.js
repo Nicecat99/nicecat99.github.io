@@ -9,7 +9,7 @@ that = document.createElement('body');
 document.querySelector('html').appendChild(that);
 document.title = 'Bavalt';
       
-    document.body.style.background = 'grey';
+    document.body.style.background = 'rgb(20,20,20)';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
         var logoX = -100;
@@ -72,19 +72,19 @@ document.title = 'Bavalt';
           document.body.style.color = 'white';
           document.body.style.background = 'black';
           document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "Level-Up">Level Up</button><h1 id = "level">Level ' + localStorage.getItem('limit').length + '</h1><h1 id = "money">$' + localStorage.getItem('$').length + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
-
-          document.getElementById('bb').style.position = 'fixed';
-          document.getElementById('bb').style.top = '280px';
-          document.getElementById('bb').style.left = '450px';
-          document.getElementById('bb').style.width = '100px';
-          document.getElementById('bb').style.height = '100px';
-          document.getElementById('bb').style.borderRadius = '100px';
-          document.getElementById('bb').style.border = '5.5pt solid white';
-          document.getElementById('bb').style.background = 'yellow';
-          document.getElementById('bb').style.color = 'white';
-          document.getElementById('bb').style.fontSize = '18px';
-          document.getElementById('bb').style.cursor = 'pointer';
-          
+          with(document.getElementById('bb').style){
+                position = 'fixed';
+                top = '280px';
+                left = '450px';
+                width = '100px';
+                height = '100px';
+                borderRadius = '100px';
+                border = '5.5pt solid white';
+                background = 'yellow';
+                color = 'white';
+                fontSize = '18px';
+                cursor = 'pointer';
+          }
           document.getElementById('menu').style.position = 'fixed';
           document.getElementById('menu').style.left = '220px';
           document.getElementById('menu').style.top = '100px';
