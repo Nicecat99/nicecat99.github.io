@@ -9,7 +9,7 @@ that = document.createElement('body');
 document.querySelector('html').appendChild(that);
 document.title = 'Bavalt';
       
-    document.body.style.background = 'rgb(20,20,20)';
+    document.body.style.background = 'rgb(60,60,60)';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
         var logoX = -100;
@@ -70,7 +70,7 @@ document.title = 'Bavalt';
         }
           
           document.body.style.color = 'white';
-          document.body.style.background = 'black';
+          document.body.style.background = 'rgb(60, 60, 60)';
           document.body.innerHTML = '<button id = "challenge">Challenge 2</button><button id = "Level-Up">Level Up</button><h1 id = "level">Level ' + localStorage.getItem('limit').length + '</h1><h1 id = "money">$' + localStorage.getItem('$').length + '</h1><button id = "cash">Challenge 1</button><button id = "htp">How To Play</button><h1 id = "menu">Select</h1><button id = "bb">Challenge 3</button>';
           with(document.getElementById('bb').style){
                 position = 'fixed';
@@ -99,21 +99,21 @@ document.title = 'Bavalt';
             BallBar();
         }
         });
-
-          document.getElementById('challenge').style.background = 'yellow';
-          document.getElementById('challenge').style.color = 'white';
-          document.getElementById('challenge').style.border = '5.5pt solid white';
-          document.getElementById('challenge').style.width = '100px';
-          document.getElementById('challenge').style.height = '100px';
-          document.getElementById('challenge').style.borderRadius = '100px';
-          document.getElementById('challenge').style.fontSize = '17px';
-          document.getElementById('challenge').style.cursor = 'pointer';
-          document.getElementById('Level-Up').style.background = 'yellow';
-          document.getElementById('Level-Up').style.border = '5.5pt solid white';
-          document.getElementById('challenge').style.position = 'fixed';
-          document.getElementById('challenge').style.top = '280px';
-          document.getElementById('challenge').style.left = '340px';
-          
+with(document.getElementById('challenge').style){
+          background = 'yellow';
+          color = 'white';
+          border = '5.5pt solid white';
+          width = '100px';
+          height = '100px';
+          borderRadius = '100px';
+          fontSize = '17px';
+          cursor = 'pointer';
+          background = 'yellow';
+          border = '5.5pt solid white';
+          position = 'fixed';
+          top = '280px';
+          left = '340px';
+}
           document.getElementById('challenge').addEventListener('click', function() {
               
             if(localStorage.getItem('limit').length === 1){
@@ -130,16 +130,18 @@ document.title = 'Bavalt';
             }
             
           });
-            
-          document.getElementById('Level-Up').style.width = '100px';
-          document.getElementById('Level-Up').style.height = '100px';
-          document.getElementById('Level-Up').style.position = 'fixed';
-          document.getElementById('Level-Up').style.left = '120px';
-          document.getElementById('Level-Up').style.top = '280px';
-          document.getElementById('Level-Up').style.color = 'white';
-          document.getElementById('Level-Up').style.borderRadius = '100px';
-          document.getElementById('Level-Up').style.fontSize = '20px';
-          document.getElementById('Level-Up').style.cursor = 'pointer';
+
+with(document.getElementById('Level-Up').style){
+          width = '100px';
+          height = '100px';
+          position = 'fixed';
+          left = '120px';
+          top = '280px';
+          color = 'white';
+          borderRadius = '100px';
+          fontSize = '20px';
+          cursor = 'pointer';
+}
           document.getElementById('Level-Up').addEventListener('click', function() {
               
             if (localStorage.getItem('$').length >= 2) {
