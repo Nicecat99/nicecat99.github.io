@@ -9,7 +9,7 @@ that = document.createElement('body');
 document.querySelector('html').appendChild(that);
 document.title = 'Bavalt';
       
-    document.body.style.background = 'black';
+    document.body.style.background = 'grey';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
         var logoX = -100;
