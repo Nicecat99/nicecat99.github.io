@@ -1,10 +1,10 @@
 
-var that;
-that = document.createElement('head');
+
+var that = document.createElement('head');
 document.querySelector('html').appendChild(that);
 that = document.createElement('meta');
 that.charset = 'utf-8';
-document.querySelector('head').appendChild(that);
+document.head.appendChild(that);
 that = document.createElement('body');
 document.querySelector('html').appendChild(that);
 document.title = 'Bavalt';
@@ -108,7 +108,6 @@ with(document.getElementById('challenge').style){
           borderRadius = '100px';
           fontSize = '17px';
           cursor = 'pointer';
-          background = 'yellow';
           border = '5.5pt solid white';
           position = 'fixed';
           top = '280px';
@@ -132,6 +131,7 @@ with(document.getElementById('challenge').style){
           });
 
 with(document.getElementById('Level-Up').style){
+          background='yellow';
           width = '100px';
           height = '100px';
           position = 'fixed';
@@ -141,6 +141,7 @@ with(document.getElementById('Level-Up').style){
           borderRadius = '100px';
           fontSize = '20px';
           cursor = 'pointer';
+          
 }
           document.getElementById('Level-Up').addEventListener('click', function() {
               
