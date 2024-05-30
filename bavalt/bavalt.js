@@ -132,6 +132,7 @@ with(document.getElementById('challenge').style){
 
 with(document.getElementById('Level-Up').style){
           background='yellow';
+          border = '5.5pt solid white';
           width = '100px';
           height = '100px';
           position = 'fixed';
