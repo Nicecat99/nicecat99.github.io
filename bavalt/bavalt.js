@@ -345,19 +345,20 @@ with(document.getElementById('Level-Up').style){
           win.style.border = '5.5pt solid white';
           win.style.width = '10px';
           win.style.height = '10px';
-          
-          luBtn['Up'].style.cursor = 'pointer';
-          luBtn['Up'].style.borderRadius = '200px';
-          luBtn['Up'].style.width = '125px';
-          luBtn['Up'].style.height = '125px';
-          luBtn['Up'].style.border = '5.5pt solid white';
-          luBtn['Up'].style.background = 'blue';
-          luBtn['Up'].style.color = 'white';
-          luBtn['Up'].style.fontSize = '40px';
-          luBtn['Up'].style.position = 'fixed';
-          luBtn['Up'].style.left = '170px';
-          luBtn['Up'].style.top = '260px';
-          
+      with(luBtn['Up'].style){
+          cursor = 'pointer';
+          borderRadius = '200px';
+          width = '125px';
+          height = '125px';
+          border = '5.5pt solid white';
+          background = 'blue';
+          color = 'white';
+          fontSize = '40px';
+          position = 'fixed';
+          left = '170px';
+          top = '260px';
+      }
+
           luBtn['Down'].style.cursor = 'pointer';
           luBtn['Down'].style.borderRadius = '200px';
           luBtn['Down'].style.width = '125px';
