@@ -1,6 +1,6 @@
 document.querySelector('html').innerHTML='<head></head><body></body>';
 document.querySelector('html').style.userSelect = 'none';
-document.head.innerHTML='<title>Bavalt</title><meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">';
+document.head.innerHTML='<title>Bavalt</title><meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.4,maximum-scale=1.0, user-scalable=no">';
     document.body.style.background = 'rgb(60,60,60)';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
