@@ -1,5 +1,5 @@
 document.querySelector('html').innerHTML='<head></head><body></body>';
-document.head.innerHTML='<meta charset="utf-8"><title>Bavalt</title>';
+document.head.innerHTML='<title>Bavalt</title><meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=1.0, user-scalable=no">';
     document.body.style.background = 'rgb(60,60,60)';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
