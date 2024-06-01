@@ -211,7 +211,27 @@ with(document.getElementById('Level-Up').style){
           document.getElementById('challenge').addEventListener('mousedown',function(){
               document.getElementById('challenge').style.background = 'rgb(174, 212, 51)';
           });
+
+                  document.getElementById('cash').addEventListener('touchstart',function(){
+              document.getElementById('cash').style.background = 'rgb(174, 212, 51)';
+          });
           
+          document.getElementById('bb').addEventListener('touchstart',function(){
+              document.getElementById('bb').style.background = 'rgb(174, 212, 51)';
+          });
+          
+          document.getElementById('Level-Up').addEventListener('touchstart',function(){
+              document.getElementById('Level-Up').style.background = 'rgb(174, 212, 51)';
+          });
+          
+          document.getElementById('htp').addEventListener('touchstart',function(){
+              document.getElementById('htp').style.background = 'rgb(174, 212, 51)';
+          });
+          
+          document.getElementById('challenge').addEventListener('touchstart',function(){
+              document.getElementById('challenge').style.background = 'rgb(174, 212, 51)';
+          });
+            
           addEventListener('mouseup',function(){
               if(typeof document.getElementById('cash') !== 'undefined'){
               document.getElementById('cash').style.background = 'yellow';
@@ -305,7 +325,12 @@ with(document.getElementById('Level-Up').style){
           luBtn['Leave'].addEventListener('mousedown', function(){
             luBtn['Leave'].style.background = 'rgb(47, 38, 204)';
         });
-        
+
+
+        luBtn['Leave'].addEventListener('touchstart', function(){
+            luBtn['Leave'].style.background = 'rgb(47, 38, 204)';
+        });
+            
           luBtn['Leave'].addEventListener('click', function(){
               clearInterval(draw2);
               Start();
@@ -315,13 +340,28 @@ with(document.getElementById('Level-Up').style){
               kl = true;
               luBtn['Left'].style.background = 'rgb(47, 38, 204)';
           });
-          
+
+         luBtn['Left'].addEventListener('touchstart',function(){
+              kl = true;
+              luBtn['Left'].style.background = 'rgb(47, 38, 204)';
+          });
+            
           luBtn['Right'].addEventListener('mousedown',function(){
               kr = true;
               luBtn['Right'].style.background = 'rgb(47, 38, 204)';
           });
-          
+
+        luBtn['Right'].addEventListener('touchstart',function(){
+              kr = true;
+              luBtn['Right'].style.background = 'rgb(47, 38, 204)';
+          });
+            
           luBtn['Up'].addEventListener('mousedown',function(){
+              ku = true;
+              luBtn['Up'].style.background = 'rgb(47, 38, 204)';
+          });
+
+          luBtn['Up'].addEventListener('touchstart',function(){
               ku = true;
               luBtn['Up'].style.background = 'rgb(47, 38, 204)';
           });
@@ -331,7 +371,10 @@ with(document.getElementById('Level-Up').style){
               luBtn['Down'].style.background = 'rgb(47, 38, 204)';
           });
           
-          
+          luBtn['Down'].addEventListener('touchstart',function(){
+              kd = true;
+              luBtn['Down'].style.background = 'rgb(47, 38, 204)';
+          });
           win.style.background = 'green';
           win.style.position = 'fixed';
           win.style.border = '5.5pt solid white';
@@ -401,7 +444,21 @@ with(document.getElementById('Level-Up').style){
                   luBtn['Leave'].style.background = 'blue';
               }
           });
-          
+
+          addEventListener('touchend',function(){
+              ku = false;
+              kd = false;
+              kl = false;
+              kr = false;
+              
+              if(typeof document.getElementById('cup') !== 'undefined'){
+                  luBtn['Left'].style.background = 'blue';
+                  luBtn['Right'].style.background = 'blue';
+                  luBtn['Up'].style.background = 'blue';
+                  luBtn['Down'].style.background = 'blue';
+                  luBtn['Leave'].style.background = 'blue';
+              }
+          });
           
           var draw2 = setInterval(function() {
             document.getElementById('coord').textContent = PlayerX + ', ' + PlayerY;
@@ -505,6 +562,10 @@ with(document.getElementById('Level-Up').style){
           bl.addEventListener('mousedown', function(){
             bl.style.background = 'rgb(47, 38, 204)';
           });
+
+        bl.addEventListener('touchstart', function(){
+            bl.style.background = 'rgb(47, 38, 204)';
+          });
         
           bl.addEventListener('click', function(){
             clearInterval(draw);
@@ -563,7 +624,17 @@ with(document.getElementById('Level-Up').style){
                 bl.style.background = 'blue';
             }
           });
-          
+
+          addEventListener('touchend', function() {
+            ballLeft = false;
+            ballRight = false;
+            if(typeof LeftBtn !== undefined){
+                LeftBtn.style.background = 'blue';
+                RightBtn.style.background = 'blue';
+                bl.style.background = 'blue';
+            }
+          });
+            
           addEventListener('keydown', function(k) {
             if (k.keyCode === 37 | k.keyCode === 65) {
               ballLeft = true;
@@ -711,7 +782,17 @@ with(document.getElementById('Level-Up').style){
                 bpr = true;
                 bbBtn['right'].style.background = 'rgb(47, 38, 204)';
             });
+
+
+            bbBtn['left'].addEventListener('touchstart',function(){
+                bpl = true;
+                bbBtn['left'].style.background = 'rgb(47, 38, 204)';
+            });
             
+            bbBtn['right'].addEventListener('touchstart',function(){
+                bpr = true;
+                bbBtn['right'].style.background = 'rgb(47, 38, 204)';
+            });
             addEventListener('mouseup',function(){
                 bpl = false;
                 bpr = false;
