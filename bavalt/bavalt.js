@@ -1,14 +1,4 @@
-
-
-var that = document.createElement('head');
-document.querySelector('html').appendChild(that);
-that = document.createElement('meta');
-that.charset = 'utf-8';
-document.head.appendChild(that);
-that = document.createElement('body');
-document.querySelector('html').appendChild(that);
-document.title = 'Bavalt';
-      
+document.querySelector('html').innerHTML='<head><meta charset="utf-8"><title>Bavalt</title></head><body></body>';
     document.body.style.background = 'rgb(60,60,60)';
     document.body.innerHTML = '<h1 style = "color:white;cursor:default;font-family:sans-serif;position:fixed;top:120px;left:140px;font-size:70px;">Nicecat99</h1><div id = "logo"></div><div id = "invis"></div>';
 
