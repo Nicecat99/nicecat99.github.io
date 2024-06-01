@@ -77,13 +77,10 @@ document.head.innerHTML='<title>Bavalt</title><meta name="viewport" content="wid
                 fontSize = '18px';
                 cursor = 'pointer';
           }
-            
-          document.getElementById('menu').style = {
-              position:'fixed',
-              left: '220px',
-              top: '100px',
-              fontSize: '50px',
-        };
+          document.getElementById('menu').style.position = 'fixed';
+          document.getElementById('menu').style.left = '220px';
+          document.getElementById('menu').style.top = '100px';
+          document.getElementById('menu').style.fontSize = '50px';
 
         document.getElementById('bb').addEventListener('click',function(){
         if(localStorage.getItem('limit').length <= 4){
