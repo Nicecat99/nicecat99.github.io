@@ -591,6 +591,16 @@ with(document.getElementById('Level-Up').style){
             RightBtn.style.background = 'rgb(47, 38, 204)';
           });
 
+          LeftBtn.addEventListener('touchstart', function() {
+            ballLeft = true;
+            LeftBtn.style.background = 'rgb(47, 38, 204)';
+          });
+
+          RightBtn.addEventListener('touchstart', function() {
+            ballRight = true;
+            RightBtn.style.background = 'rgb(47, 38, 204)';
+          });
+            
           LeftBtn.style.cursor = 'pointer';
           LeftBtn.style.borderRadius = '200px';
           LeftBtn.style.width = '125px';
