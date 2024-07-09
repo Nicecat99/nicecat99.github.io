@@ -380,7 +380,7 @@ with(document.getElementById('Level-Up').style){
           win.style.border = '5.5pt solid white';
           win.style.width = '10px';
           win.style.height = '10px';
-      with(luBtn.up.style){
+      with(luBtn.Up.style){
           cursor = 'pointer';
           borderRadius = '200px';
           width = '125px';
