@@ -321,7 +321,61 @@ with(document.getElementById('Level-Up').style){
           luBtn['Leave'].style.background = 'blue';
           luBtn['Leave'].style.color = 'white';
           luBtn['Leave'].style.cursor = 'pointer';
+                    win.style.background = 'green';
+          win.style.position = 'fixed';
+          win.style.border = '5.5pt solid white';
+          win.style.width = '10px';
+          win.style.height = '10px';
+        
+      with(luBtn.Up.style){
+          cursor = 'pointer';
+          borderRadius = '200px';
+          width = '125px';
+          height = '125px';
+          border = '5.5pt solid white';
+          background = 'blue';
+          color = 'white';
+          fontSize = '40px';
+          position = 'fixed';
+          left = '170px';
+          top = '260px';
+      }
+
+          luBtn['Down'].style.cursor = 'pointer';
+          luBtn['Down'].style.borderRadius = '200px';
+          luBtn['Down'].style.width = '125px';
+          luBtn['Down'].style.height = '125px';
+          luBtn['Down'].style.border = '5.5pt solid white';
+          luBtn['Down'].style.background = 'blue';
+          luBtn['Down'].style.color = 'white';
+          luBtn['Down'].style.fontSize = '40px';
+          luBtn['Down'].style.position = 'fixed';
+          luBtn['Down'].style.left = '310px';
+          luBtn['Down'].style.top = '260px';
           
+          luBtn['Left'].style.cursor = 'pointer';
+          luBtn['Left'].style.borderRadius = '200px';
+          luBtn['Left'].style.width = '125px';
+          luBtn['Left'].style.height = '125px';
+          luBtn['Left'].style.border = '5.5pt solid white';
+          luBtn['Left'].style.background = 'blue';
+          luBtn['Left'].style.color = 'white';
+          luBtn['Left'].style.fontSize = '40px';
+          luBtn['Left'].style.position = 'fixed';
+          luBtn['Left'].style.left = '30px';
+          luBtn['Left'].style.top = '260px';
+          
+          luBtn['Right'].style.cursor = 'pointer';
+          luBtn['Right'].style.borderRadius = '200px';
+          luBtn['Right'].style.width = '125px';
+          luBtn['Right'].style.height = '125px';
+          luBtn['Right'].style.border = '5.5pt solid white';
+          luBtn['Right'].style.background = 'blue';
+          luBtn['Right'].style.color = 'white';
+          luBtn['Right'].style.fontSize = '40px';
+          luBtn['Right'].style.position = 'fixed';
+          luBtn['Right'].style.left = '450px';
+          luBtn['Right'].style.top = '260px';
           luBtn['Leave'].addEventListener('mousedown', function(){
             luBtn['Leave'].style.background = 'rgb(47, 38, 204)';
         });
@@ -375,60 +429,7 @@ with(document.getElementById('Level-Up').style){
               kd = true;
               luBtn['Down'].style.background = 'rgb(47, 38, 204)';
           });
-          win.style.background = 'green';
-          win.style.position = 'fixed';
-          win.style.border = '5.5pt solid white';
-          win.style.width = '10px';
-          win.style.height = '10px';
-      with(luBtn.Up.style){
-          cursor = 'pointer';
-          borderRadius = '200px';
-          width = '125px';
-          height = '125px';
-          border = '5.5pt solid white';
-          background = 'blue';
-          color = 'white';
-          fontSize = '40px';
-          position = 'fixed';
-          left = '170px';
-          top = '260px';
-      }
 
-          luBtn['Down'].style.cursor = 'pointer';
-          luBtn['Down'].style.borderRadius = '200px';
-          luBtn['Down'].style.width = '125px';
-          luBtn['Down'].style.height = '125px';
-          luBtn['Down'].style.border = '5.5pt solid white';
-          luBtn['Down'].style.background = 'blue';
-          luBtn['Down'].style.color = 'white';
-          luBtn['Down'].style.fontSize = '40px';
-          luBtn['Down'].style.position = 'fixed';
-          luBtn['Down'].style.left = '310px';
-          luBtn['Down'].style.top = '260px';
-          
-          luBtn['Left'].style.cursor = 'pointer';
-          luBtn['Left'].style.borderRadius = '200px';
-          luBtn['Left'].style.width = '125px';
-          luBtn['Left'].style.height = '125px';
-          luBtn['Left'].style.border = '5.5pt solid white';
-          luBtn['Left'].style.background = 'blue';
-          luBtn['Left'].style.color = 'white';
-          luBtn['Left'].style.fontSize = '40px';
-          luBtn['Left'].style.position = 'fixed';
-          luBtn['Left'].style.left = '30px';
-          luBtn['Left'].style.top = '260px';
-          
-          luBtn['Right'].style.cursor = 'pointer';
-          luBtn['Right'].style.borderRadius = '200px';
-          luBtn['Right'].style.width = '125px';
-          luBtn['Right'].style.height = '125px';
-          luBtn['Right'].style.border = '5.5pt solid white';
-          luBtn['Right'].style.background = 'blue';
-          luBtn['Right'].style.color = 'white';
-          luBtn['Right'].style.fontSize = '40px';
-          luBtn['Right'].style.position = 'fixed';
-          luBtn['Right'].style.left = '450px';
-          luBtn['Right'].style.top = '260px';
           
           addEventListener('mouseup',function(){
               ku = false;
