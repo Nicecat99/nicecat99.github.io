@@ -1,5 +1,5 @@
 // Edit html code
-import { tap, test } from './control.js';
+import { keyPress, control } from './control.js';
 let i = 0;
 document.all[0].innerHTML = `
 <head>
@@ -10,11 +10,9 @@ document.all[0].innerHTML = `
 </body>
 `;
 
-test();
+control();
 function draw(){
-if(tap){
-i++;}
-document.body.innerHTML=i;
+// using this function later
 requestAnimationFrame(draw);
 }
 
