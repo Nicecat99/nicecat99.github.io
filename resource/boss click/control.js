@@ -8,3 +8,5 @@ tap = true;
 tap = false;
 });
 };
+
+export { tap, test }
