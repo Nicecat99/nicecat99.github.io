@@ -1,4 +1,14 @@
-* {
-// test
+body {
   background: green;
+}
+
+* {
+   font-family: sans-serif;
+   color: white;
+}
+
+button {
+   background: blue;
+   border: 5px solid white;
+   cursor: pointer;
 }
