@@ -2,7 +2,7 @@
 import { keyPress, key, control } from './control.js';
 let player = {
     x: innerWidth/2-150,
-    y: inner height/2-150,
+    y: innerHeight/2-150,
 };
 document.all[0].innerHTML = `
 <head>
