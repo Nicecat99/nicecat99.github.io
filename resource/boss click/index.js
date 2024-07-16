@@ -1,5 +1,5 @@
 // Edit html code
-import { keyPress, control } from './control.js';
+import { keyPress, key, control } from './control.js';
 let i = 0;
 document.all[0].innerHTML = `
 <head>
