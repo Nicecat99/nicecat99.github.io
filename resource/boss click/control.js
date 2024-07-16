@@ -1,12 +1,14 @@
-let tap = false;
-function test(){
-    addEventListener('touchstart', function(){
-tap = true;
-});
-
-    addEventListener('touchend', function(){
-tap = false;
-});
+let keyPress = false;
+let key;
+function control(){
+onkeydown = function(e){
+    keyPress = true;
+    key = e;
 };
 
-export { tap, test }
+onkeyup = function(){
+    keyPress = false;
+};
+};
+
+export { keyPress, key, control }
