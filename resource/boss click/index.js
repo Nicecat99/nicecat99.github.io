@@ -15,14 +15,16 @@ document.all[0].innerHTML = `
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coming Soon...</h1>
+    <h1>Loading, please wait...</h1>
 </body>
 `;
 
 control();
-function draw(){
-// using this function later
-requestAnimationFrame(draw);
+function Main(){
+    
+
+
+    requestAnimationFrame(Main);
 }
 
-draw();
+Main();
