@@ -1,5 +1,6 @@
 import { keyPress, key, control} from './control.js';
-
-function game(player,boss){
-    if(left){}
+function game(DATA){
+    if(DATA.move.left){
+        
+    }
 }
