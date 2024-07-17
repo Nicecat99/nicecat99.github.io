@@ -4,11 +4,7 @@ function control(x){
 onkeydown = function(e){
     keyPress = true;
     key = e;
-};
-
-onkeyup = function(){
-    keyPress = false;
-    if(key.key=='ArrowLeft' | key.key=='a'){
+ if(key.key=='ArrowLeft' | key.key=='a'){
         x.left=true;
     }
 
@@ -23,6 +19,14 @@ onkeyup = function(){
     if(key.key=='ArrowDown' | key.key=='s'){
         x.down=true;
     }
+};
+
+onkeyup = function(){
+    keyPress = false;
+    x.left = false;
+    x.right = false;
+    x.up = false;
+    x.down = false;
 };
 };
 
