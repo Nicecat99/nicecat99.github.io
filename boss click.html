@@ -6,8 +6,20 @@
   </head>
   <body>
     <h1>Failed to load the game make sure you have JavaScript enabled or use a browser that supports this version</h1>
-    <script type="module">
-      import './resource/boss click/index.js';
+    <script>
+      document.body.innerHTML = "<h1>PLEASE WAIT, THE PAGE IS LOADING</h1>";
+
+
+      function Game(){
+          document.body.innerHTML = `
+          
+          <h1>Haven't worked on this Game</h1>
+`;
+      }
+
+      onload = function(){
+          setTimeout(Game, 250);
+      };
     </script>
   </body>
 </html>
