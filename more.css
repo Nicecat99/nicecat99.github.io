@@ -1,5 +1,6 @@
         html {
-               margin: 50;
+               margin: 25;
+               padding: 25;
         }
 
         .fade {
@@ -10,8 +11,8 @@
 
 
        .btn {
-              width:350px;
-              height:220px;
+              width:300px;
+              height:180px;
               background: rgb(0,40,40);
               cursor:pointer;
               border: 5px solid white;
