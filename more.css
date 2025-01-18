@@ -6,14 +6,15 @@
 
 
        .btn {
-              width:400px;
-              height:250px;
+              width:350px;
+              height:220px;
               background: rgb(0,40,40);
               cursor:pointer;
               border: 5px solid white;
               border-radius: 10px;
               color:white;
               font-size:50px;
+              font-weight: bold;
        }
        .under {
               text-decoration: none;
