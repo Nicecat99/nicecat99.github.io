@@ -1,4 +1,8 @@
-       .fade {
+        html {
+               margin: 50;
+        }
+
+        .fade {
               font-size:30px;
               animation-name:fade;
               animation-duration:3s;
@@ -6,7 +10,6 @@
 
 
        .btn {
-              margin: 50px;
               width:350px;
               height:220px;
               background: rgb(0,40,40);
